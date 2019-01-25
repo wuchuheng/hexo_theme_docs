@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+    hexo_theme_docs:
+        build: .
+        image: hexo_theme_docs:latest
+        ports:
+            - "4000:4000"
+            - "3001:3001"
+        volumes:
+            - ./scaffolds/:/hexo_theme_docs/scaffolds/
+            - ./source/:/hexo_theme_docs/source/
+            - ./themes/:/hexo_theme_docs/themes/
+            - ./_config.yml:/hexo_theme_docs/_config.yml
+        privileged: true
