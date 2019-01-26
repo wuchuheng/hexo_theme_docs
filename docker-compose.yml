@@ -12,4 +12,6 @@ services:
             - ./source/:/hexo_theme_docs/source/
             - ./themes/:/hexo_theme_docs/themes/
             - ./_config.yml:/hexo_theme_docs/_config.yml
+            - ./package.json:/hexo_theme_docs/package.json
+            - ./yarn.lock:/hexo_theme_docs/yarn.lock
         privileged: true
